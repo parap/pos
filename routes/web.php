@@ -26,6 +26,8 @@ Route::get('/shop', function () {
     return view('welcome');
 });
 
+Route::get('/orders', [\App\Http\Controllers\OrderController::class, 'index'])->name('orders.index');
+
 Route::get('/show-order', function () {
     return view('welcome');
 });
